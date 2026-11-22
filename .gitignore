@@ -1,0 +1,38 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+# Virtual environments
+.venv/
+venv/
+
+# Environment and secret files
+.env
+.env.*
+!.env.example
+
+# uv
+.uv-cache/
+
+# IDEs and editors
+.vscode/
+.idea/
+*.iml
+
+# Logs
+*.log
+
+# macOS
+.DS_Store
