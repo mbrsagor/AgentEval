@@ -3,7 +3,10 @@ from langgraph.checkpoint.memory import InMemorySaver
 from langchain.messages import HumanMessage
 from uuid import uuid4
 
-from tools import calculate_right_refund , get_today_date, issue_refund_ticket, get_user_purchase_history
+from tools import (
+    calculate_right_refund , get_today_date, 
+    issue_refund_ticket, get_user_purchase_history
+)
 from prompts import agent_system_prompt
 from dotenv import load_dotenv
 from models import model
@@ -14,7 +17,10 @@ load_dotenv()
 agent = create_agent(
     model=model,
     system_prompt=agent_system_prompt,
-    tools=[calculate_right_refund, get_user_purchase_history, issue_refund_ticket, get_today_date],
+    tools=[
+        calculate_right_refund, get_user_purchase_history, 
+        issue_refund_ticket, get_today_date
+        ],
     response_format=Answer,
     checkpointer=InMemorySaver()
 )
