@@ -14,6 +14,7 @@ from objects import Answer
 
 load_dotenv()
 
+# Create agent
 agent = create_agent(
     model=model,
     system_prompt=agent_system_prompt,
@@ -26,6 +27,7 @@ agent = create_agent(
 )
 
 
+# Run conversation
 def run_conversation():
     config = {"configurable": {"thread_id": str(uuid4())}}
 
